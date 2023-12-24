@@ -1,0 +1,938 @@
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Chetsapp Private Limited" />
+    <title>Documentation | CUOR-PM</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="documentation-page">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <!-- <nav id="sidebar">
+            <div class="overlay"></div>
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-bar"></i>
+                <span class="mt-0"></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="sidebar-header text-center">
+                <img src="img/vipspm_logo_large.png" width="150" alt="VipsPM" />
+            </div>
+            <div class="sidebar-scroll">
+                <ul class="list-unstyled components m-0">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li>
+                        <a href="#installation" class="nav-dropdown">Installation</a>
+                        <ul class="dropdown-container list-unstyled mt-0 pt-0 ">
+                            <li>
+                                <a href="#installation1">Single</a>
+                            </li>
+                            <li>
+                                <a href="#installation2" class="nav-dropdown">Separate</a>
+                                <ul class="dropdown-container list-unstyled mt-0 pt-0 ">
+                                    <li>
+                                        <a href="#installation_angular">Installing VipsPM-angular</a>
+                                    </li>
+                                    <li>
+                                        <a href="#installation_laravel">Installing VipsPM-laravel</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#troubleshooting" class="nav-dropdown">Troubleshooting</a>
+                        <ul class="dropdown-container list-unstyled mt-0 pt-0 ">
+                            <li>
+                                <a href="#prerequisites">Prerequisites</a>
+                            </li>
+                            <li>
+                                <a href="#installation_laravel_manual">Manually Change Configurations for VipsPM-laravel (backend)</a>
+                            </li>
+                            <li>
+                                <a href="#faq">FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#updation" class="nav-dropdown">Updation</a>
+                        <ul class="dropdown-container list-unstyled mt-0 pt-0 ">
+                            <li>
+                                <a href="#updation1">Single Installation</a>
+                            </li>
+                            <li>
+                                <a href="#updation2">Development (Local server)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#theme_options">Theme Options</a></li>
+                    <li><a href="#vipspm_uses">How to Use</a></li>
+                    <li><a href="#modules">Module Pages</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#source_code">Source Code Structure</a></li>
+                    <li><a href="#customer_support">Customer Support</a></li>
+                    <li><a href="#source_credit">Sources and Credits</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                </ul>
+            </div>
+        </nav> -->
+        <!-- Page Content -->
+        <div id="document-content" class="content">
+            
+            <!-- Modules Section Start -->
+            <section id="modules">
+                <div class="page-header">
+                    <h3><span class="title-number"> 8 </span> Module Pages</h3>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2><b>Dashboard</b></h2>
+                        <ul>
+                            <li> Dashboard setting for enable and disable Widgets, Table, etc.</li>
+                            <li>Status of In Progress and Overdue projects, In Progress and Overdue tasks, In Progress and Overdue defects, In Progress and Overdue incidents, Accepted and Declined Estimates, Paid and Unpaid Invoices, Due and Received Payments, Received and Approved Leaves</li>
+                            <li>Count of teams, users, clients, and articles.</li>
+                            <li>Project's task progress show on donut chart, Project's status show on radar chart and monthly report show in bar chart.</li>
+                            <li>Recently created projects list, tasks list, defects list, incident list, todos list, meetings list, announcements list, user activities etc.</li>
+                            <li>Customize your sidebar colors and background images using theme color options by clicking on the top right setting icons.</li>
+                            <li>Mail notifications, languages translation, sidebar layout settings and other menu show in header.</li>
+                            <li>All menus show in left sidebar.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/dashboard.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/calendar.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Calendar</b></h2>
+                        <ul>
+                            <li>Tasks, defects, incidents, meetings, holidays and meetings show in calendar.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Roles</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete multiples roles</li>
+                            <li>Manage Roles with flexible permissions of view, create, edit, delete rights of each modules</li>
+                            <li>Export csv, excel and pdf files</li>
+                            <li>Default 6 Roles are included for admin, staff, client, Project Manager, HR Manager and Sales Manager</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/roles.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/departments.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Departments</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete multiples departments</li>
+                            <li>Assign departments wise multiples roles and permissions.</li>
+                            <li>Remove departments wise roles and permissions.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Users</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete multiples users</li>
+                            <li>Assign permissions(View, edit, delete) to other users.</li>
+                            <li>Invite users</li>
+                            <li>Manage Avatars</li>
+                            <li>Assign Primary and Secondary manager to User</li>
+                            <li>Import users via CSV file</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/users.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/teams.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Teams</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete multiples teams with team leader</li>
+                            <li>Import team via CSV file</li>
+                            <li>Before importing teams, make sure that you had import required users.</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Holidays</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete/View multiples holidays</li>
+                            <li>Locationwise holidays</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/holidays.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/meetings.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Meetings</b></h2>
+                        <ul>
+                            <li>Schedule multiples meetings</li>
+                            <li>Edit/Delete/Cancel meetings</li>
+                            <li>Meetings will be added to timesheet</li>
+                            <li>Export csv, excel and pdf files</li>
+                            <li>in sigle meeting, multiple user can create timesheet</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Clients</b></h2>
+                        <ul>
+                            <li>Manage multiples clients</li>
+                            <li>Clients have only one roles client.</li>
+                            <li>Create/Edit/Remove clients</li>
+                            <li>View clients</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/clients.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/users_profile.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>User/Client Profile</b></h2>
+                        <ul>
+                            <li>Counts user projects, tasks, defects, incidents, comments, activities, articles, messages etc.</li>
+                            <li>Show total hours of projects, tasks, defects, incidents, leaves and meetings</li>
+                            <li>Change user avatar, email and password</li>
+                            <li>User details, projects, tasks, defects, incidents and activities of user.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>File Manager(Media library)</b></h2>
+                        <ul>
+                            <li>Create multiple folders(Nested folders)</li>
+                            <li>Upload multiples files</li>
+                            <li>Edit folders and files name</li>
+                            <li>Download files</li>
+                            <li>Remove folders and files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/filemanager.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/project_planner.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Project Planner</b></h2>
+                        <ul>
+                            <li>Create projects, sprints, tasks and stories.</li>
+                            <li>Edit/Delete projects, sprints, tasks and stories.</li>
+                            <li>View project planner.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Projects</b></h2>
+                        <ul>
+                            <li>Create multiple projects with custom fields.</li>
+                            <li>Assign team members to projects.</li>
+                            <li>Set budgets and time.</li>
+                            <li>Set start and due date of projects.</li>
+                            <li>Set the progress and status of the projects.</li>
+                            <li>View, edit and delete projects.</li>
+                            <li>Download sample CSV file for project import.</li>
+                            <li>Import projects via CSV file.</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/projects.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/projects_view.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Project Details</b></h2>
+                        <ul>
+                            <li>Inline editing in project detail fields.</li>
+                            <li>Show project progress and status.</li>
+                            <li>Custom fields</li>
+                            <li>Projects and their tasks, sub-tasks, defects, incidents with due dates.</li>
+                            <li>Add/Remove project comments.</li>
+                            <li>Add/Remove project attachments.</li>
+                            <li>Add/Edit project todos.</li>
+                            <li>Update project note.</li>
+                            <li>Project activities.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Tasks</b></h2>
+                        <ul>
+                            <li>Create multiple tasks with custom fields for specific projects.</li>
+                            <li>Create sub-tasks of any parent task.</li>
+                            <li>Assign project members to tasks.</li>
+                            <li>Set start and due date of tasks.</li>
+                            <li>Set the progress, Overdue and status of the tasks.</li>
+                            <li>Set priorities and estimated hours of the tasks.</li>
+                            <li>Copy, View, edit and delete tasks.</li>
+                            <li>Download sample CSV file for tasks import.</li>
+                            <li>Import tasks via CSV file.</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/tasks.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/task_detail.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Task Details</b></h2>
+                        <ul>
+                            <li>Inline editing in task detail fields.</li>
+                            <li>Show task progress, estimated hours and actual hours.</li>
+                            <li>Change task status.</li>
+                            <li>Project with version.</li>
+                            <li>Custom fields</li>
+                            <li>Add/Remove task comments.</li>
+                            <li>Add/Remove task attachments.</li>
+                            <li>Add/Edit task todos.</li>
+                            <li>Add/Edit/Remove task timesheet.</li>
+                            <li>Add task note.</li>
+                            <li>Task activities.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Task board(Kanban View)</b></h2>
+                        <ul>
+                            <li>Display kanban view of tasks.</li>
+                            <li>Change the status of tasks using drag and drop.</li>
+                            <li>Create task.</li>
+                            <li>View task details.</li>
+                            <li>Edit/Delete task.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/kanban_board.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/defect.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Defects</b></h2>
+                        <ul>
+                            <li>Create multiple defects with custom fields for specific projects.</li>
+                            <li>Assign team members to the defect.</li>
+                            <li>Set the severity and status of defects.</li>
+                            <li>Set defect types.</li>
+                            <li>View, edit and delete defects.</li>
+                            <li>Export csv, excel and pdf files</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Defect Detail</b></h2>
+                        <ul>
+                            <li>Inline editing in defect detail fields.</li>
+                            <li>Show the severity and status of defect.</li>
+                            <li>Show the defect created and modify dates.</li>
+                            <li>Custom fields</li>
+                            <li>Add/Remove defect comments.</li>
+                            <li>Add/Remove defect attachments.</li>
+                            <li>Add/Edit defect todos.</li>
+                            <li>Add/Edit/Remove defect timesheet.</li>
+                            <li>Add defect notes.</li>
+                            <li>Defect activities.</li>
+                            <li>Defect histories.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/defect_detail.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/incidents.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Incidents (Tickets)</b></h2>
+                        <ul>
+                            <li>Create multiple incidents with custom fields for specific projects.</li>
+                            <li>Assign team members to incidents.</li>
+                            <li>Set priority and status of incidents.</li>
+                            <li>Set incident type.</li>
+                            <li>View, edit and delete incidents.</li>
+                            <li>Export CSV, excel, pdf file.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Incident(Ticket) Detail</b></h2>
+                        <ul>
+                            <li>Inline editing in incident detail fields.</li>
+                            <li>Show the priority and status of the incident.</li>
+                            <li>Show incident created and modified dates.</li>
+                            <li>Custom fields</li>
+                            <li>Add/Remove incident comments.</li>
+                            <li>Add/Remove incident attachments.</li>
+                            <li>Add/Edit/Remove incident timesheet.</li>
+                            <li>Add/Edit incident todos.</li>
+                            <li>Add incident notes.</li>
+                            <li>Incident activities.</li>
+                            <li>Incident histories.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/incident_detail.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/knowledgebase.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Knowledgebase</b></h2>
+                        <ul>
+                            <li>Create knowledgebase with categories and articles.</li>
+                            <li>Create categories.</li>
+                            <li>Search articles.</li>
+                            <li>Create articles in categories.</li>
+                            <li>View/Edit/Delete categories.</li>
+                            <li>View/Edit/Delete articles.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Teamboard</b></h2>
+                        <ul>
+                            <li>Count assign projects to the team.</li>
+                            <li>Show team members and team leader</li>
+                            <li>Count team members.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/teamboard.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/reports.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Reports</b></h2>
+                        <ul>
+                            <li>Projects, tasks, defects and incidents's reports.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Todos</b></h2>
+                        <ul>
+                            <li>Create/Edit/Delete todos.</li>
+                            <li>Change todo status(Open, Completed)</li>
+                            <li>Open todos from the dashboard todos list.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/todos.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/announcement.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Announcements</b></h2>
+                        <ul>
+                            <li>Create an announcement.</li>
+                            <li>Change start and due date.</li>
+                            <li>Send announcements to clients.</li>
+                            <li>Change announcement status.</li>
+                            <li>Export CSV, excel, pdf file.</li>
+                            <li>Open announcement from the dashboard's announcements list.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Mailbox</b></h2>
+                        <ul>
+                            <li>Compose mail with attachments.</li>
+                            <li>Mail save as draft and discard.</li>
+                            <li>Set favorite mails.</li>
+                            <li>Mark as read mails.</li>
+                            <li>Open mailbox from the header menu item.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/mailbox.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/providers.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Providers</b></h2>
+                        <ul>
+                            <li>Create providers for appointments.</li>
+                            <li>Update/Delete providers.</li>
+                            <li>Set appoitments colors.</li>
+                            <li>Export CSV, excel, pdf file.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Appointments</b></h2>
+                        <ul>
+                            <li>Create appointments.</li>
+                            <li>Update/Delete appointments.</li>
+                            <li>Book appoitments on available dates.</li>
+                            <li>Send appointments notification to users.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/appoitments.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/timesheet.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Timesheet</b></h2>
+                        <ul>
+                            <li>Timesheet allows the recording of working hours inside tasks, defects, incidents, meetings as well as manage from Timesheet module. Timesheet automatically sends time report to configured email.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Modules Section End -->
+            <div class="col-md-12">
+                <hr class="p-4">
+            </div>
+            <!-- Settings Start -->
+            <section id="settings">
+                <div class="page-header">
+                    <h3><span class="title-number"> 9 </span> Settings</h3>
+                </div>
+                <p>Here you can get full guide about, how to get and configure settings of the VipsPM tool.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2><b>Company Detail</b></h2>
+                        <ul>
+                            <li>Change your company name, legal name, short name and other details related to your environments.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/company_detail.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/email_settings.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Email Settings</b></h2>
+                        <ul>
+                            <li>Change your mail settings.</li>
+                            <li>Mail settings used during authentication, projects, tasks, defects, and incidents etc...</li>
+                            <li>You can manually change your mail settings in <code>.env</code> file.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Email Templates</b></h2>
+                        <ul>
+                            <li>
+                                You can change the content of email templates. but Don't change the variables name defined in <code><b>{}</b></code> and link text.<br>
+                                For Exa.<br>
+                                <span class="text-info">{USERNAME}</span><br>
+                                <span class="text-info">Finish your registration...</span><br>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/email_templates.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/email_notification.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Email Notification</b></h2>
+                        <ul>
+                            <li>Active/Inactive email sending.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Cronjob</b></h2>
+                        <ul>
+                            <li>Enable cronjob for the Email queue, Weekly database backup, Daily task reports email to users, Announcement and Leave status update.</li>
+                            <li>Project, Task, Defect, Incident, Appointment and Meeting start reminder.</li>
+                            <li>Project, Task, Defect and Incident overdue reminder.</li>
+                            <li>Estimate and Invoice due reminder and Recurring invoice.</li>
+                            <li>You have to manually create cronjob on your server for use these features.</li>
+                            <li>When using the scheduler, you only need to add the following Cron entry to your server.<br>* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1</li>
+                            <li>Do not forget to replace /path/to/artisan with the full path to the Artisan command of your laravel application.</li>
+                            <li>This Cron will call the Laravel command scheduler every minute.
+                                When the schedule:run command is executed, Laravel will evaluate your scheduled tasks and runs the tasks that are due.</li>
+                            <li>For more info read the following documentation:<br>
+                                <a href="https://laravel.com/docs/9.x/scheduling" target="_blank">Task Scheduling</a>
+                                <span>|</span>
+                                <a href="https://www.activecampaign.com/help/setting-up-a-cron-job" target="_blank">Setting up cronjob</a>
+                            </li>
+                            <span class="text-info">If you are feeling stuck to create cronjob then ask for support to your hosting provider.</span>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/cronjob.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/manuallocation.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Menu allocations</b></h2>
+                        <ul>
+                            <li>Active/Deactive menu items from the sidebar.</li>
+                            <li>Just drag and drop menu item from both the side.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Theme Settings</b></h2>
+                        <ul>
+                            <li>Change your company logo. Its display on auth pages.</li>
+                            <li>Change your auth pages(login, register, forgot and reset password) background image using login background feature.</li>
+                            <li>Change you sidebar top company logo using the company sidebar logo feature.</li>
+                            <li>Dynamically add sidebar background images using sidebar background images features. Set your sidebar background image by clicking top right side setting icons(Sidebar Layout Options).</li>
+                            <li>Set sidebar layout using sidebar width and collapsed menu.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/theme_settings.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/dashboard_setting.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Dashboard Settings</b></h2>
+                        <ul>
+                            <li>Hide/Show listing features of projects, tasks, defects, incidents, meetings, announcements, recent activities, todos list etc from dashboard.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>System Settings</b></h2>
+                        <ul>
+                            <li>Change timezone, default language, default currency, datatable pagination length, date format, time format and enable/disable registration button etc.</li>
+                            <li>Set datatable record length per page using tables pagination limits.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/system_setting.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/translations.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Translations(Languages)</b></h2>
+                        <ul>
+                            <li>Change languages</li>
+                            <li>Delete languages</li>
+                            <li>Choose language for your application</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Database Backup</b></h2>
+                        <ul>
+                            <li>Backup, restore and download database.</li>
+                            <li>You can also delete backup database.</li>
+                            <li>For autobackup database run the laravel schedular using cron.</li>
+                            <li>Or run the command: <code>php artisan db:backup-custom</code>.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/database_backup.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/custom_fields.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Custom Fields</b></h2>
+                        <ul>
+                            <li>Add more fields on projects, tasks, defects and incidents using custom fields.</li>
+                            <li>Create custom fields based on your requirements.</li>
+                            <li>Edit/Delete custom fields.</li>
+                            <li>Only active custom fields display on projects, tasks, defects and incidents.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Slack Integration</b></h2>
+                        <ul>
+                            <li><a href="https://slack.com/signin" target="_blank">SignIn/Login to slack.</a></li>
+                            <li><a href="https://slack.com/signin#/workspaces" target="_blank">Create workspace.</a></li>
+                            <li>
+                                <a href="https://api.slack.com/apps" target="_blank">Create an app inside the
+                                    workspace.</a>
+                                <ul>
+                                    <li>Create new app.</li>
+                                    <li><a href="https://prnt.sc/qenrHDhyzDua" target="_blank">Select From scratch.</a>
+                                    </li>
+                                    <li><a href="https://prnt.sc/cEJx5QNE5rbl" target="_blank">Name app & choose
+                                            workspace.</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://prnt.sc/Iar6SNAb_VXn" target="_blank">Activate Incoming Webhooks.</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/slack.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <ul>
+                            <li>After that Go to Manage distributions tab and Activate Public Distribution. (Optional)
+                                <ul>
+                                    <li><a href="https://prnt.sc/4WUAaOF0Kbmv" target="_blank">Image 1</a></li>
+                                    <li><a href="https://prnt.sc/Inb3k3xayCIV" target="_blank">Image 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://prnt.sc/wWx4V4cAf9en" target="_blank">After that Go to OAuth and
+                                    Permissions tab & add Redirect URL</a>
+                                <ul>
+                                    <li><a href="https://prnt.sc/LHCDhc_ETAZE" target="_blank">Copy Redirect URL from
+                                            VipsPM.</a></li>
+                                    <li>Don’t forget to save the URL.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://prnt.sc/PMXexocevngc" target="_blank">Add Bot Token Scopes (OAuth &
+                                    Permissions -> Scopes -> User Token Scopes)</a>
+                                <ul>
+                                    <li>Incoming-webhook</li>
+                                    <li>chat:write</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://prnt.sc/DJ0-3ne2-D6j" target="_blank">Add User Token Scopes (OAuth &
+                                    Permissions -> Scopes -> Bot Token Scopes)</a>
+                                <ul>
+                                    <li>channels:history</li>
+                                    <li>chat:write</li>
+                                    <li>channels:read</li>
+                                    <li>Users:read</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://prnt.sc/x3EpUwNka-Wr" target="_blank">Install your app </a> and <a
+                                    href="https://prnt.sc/gLDlDG5J4Jd3" target="_blank">Select Channel.</a>
+                            </li>
+                            <li>
+                                <a href="https://prnt.sc/6_Lx4e5R4E0C" target="_blank">Go to the application detail page
+                                    where you can find your App Credentials.</a>
+                                <ul>
+                                    <li>
+                                        <a href="https://prnt.sc/ZOQ1Bor8pVrO" target="_blank">Save Client ID and Client
+                                            Secret on the tool.</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Now From VIpsPM Tool Click on Add to slack button.
+                                <ul>
+                                    <li>you will be redirected to the slack permission page.</li>
+                                    <li>Here add your channel in which you want to get slack notification. (Step 9)</li>
+                                </ul>
+                            </li>
+                            <li>Go to your Slack Channel and type the following as a message. (Optional Step)
+                                <ul>
+                                    <li><a href="https://example.slack.com/ssb/redirect"
+                                            target="_blank">https://example.slack.com/ssb/redirect</a></li>
+                                    <li><code>/invite @BOT_NAME</code></li>
+                                    <li>Exa. <code>/invite @VipsPM SAAS</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/estimate.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Estimate</b></h2>
+                        <ul>
+                            <li>Add ESTIMATE PREFIX like "EST-" as you like</li>
+                            <li>Set default due to all Estimate in days</li>
+                            <li>Enable/Disable Auto Remider for estimate due and set remind day before due</li>
+                            <li>Write notes and tems and condition</li>
+                            <li>Can upload Logo in estimate from this setting</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Invoice</b></h2>
+                        <ul>
+                            <li>Add Invoice PREFIX like "INV-" as you like</li>
+                            <li>Set default due to all Invoice in days</li>
+                            <li>Enable/Disable Auto Remider for invoice due and set remind day before due</li>
+                            <li>Write notes and tems and condition</li>
+                            <li>Can upload Logo in invoice from this setting</li>
+                            <li>Enable GST if dealing with indian company</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/invoice.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="p-4">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/payment.png" class="img-fluid shadow-lg">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><b>Payment Gateway</b></h2>
+                        <ul>
+                            <li>Login to Paypal and fill Paypal Partnership form.</li>
+                            <li>Create Client ID and sandbox</li>
+                            <li>Step are mentioned here - https://developer.paypal.com/docs/business/checkout/set-up-standard-payments/</li>
+                            <li>Write Label whichever you want like "Paypal" and add clientid</li>
+                            <li>You can enable or disable paypal payment gateway</li>
+                        </ul>
+                        <ul>
+                            <li>Signup with Stripe and complete account</li>
+                            <li>create stripe API. steps are in this link - https://stripe.com/docs/keys</li>
+                            <li>Write Label whichever you want like "Stripe" and add Stripe API and Secret</li>
+                            <li>You can enable or disable Stripe payment gateway</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menuspy.js"></script>
+
+</html>
